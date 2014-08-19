@@ -21,9 +21,11 @@ public class MyBatisSimpleTest {
 		  Blog blog = session.selectOne("org.mybatis.example.BlogMapper.selectBlog", 1);
 		  System.out.println(blog);
 		  
+		  // 또다른 방법
 		  BlogMapper mapper2 = session.getMapper(BlogMapper.class);
 		  Blog blog2 = mapper2.selectBlog(1);
 		  System.out.println(blog2);
+		  
 		} finally {
 		  session.close();
 		}		
